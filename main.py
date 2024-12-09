@@ -23,10 +23,9 @@ def print(*objects, end='\n', sep=' ', color=False, borderType=None, caption="Ou
    else:
       stdout.write(colored(string, color=color, attrs=["bold", "blink"]) + end);
 
-print("THIS SHOULD BE RED...", sep=' - ', end='\n\t===== NEW LINE HERE. =====\n', color='red');
-print("This should be GREEN and have a border of 0", borderType="0", sep="/", color='green');
-print("Boring old print with no borders and no caption.", caption="")
-
+print("THIS SHOULD BE RED...", sep=' - ', end='\n\t===== NEW LINE HERE. =====\n', color='red', caption='changed the caption:');
+print("This should be GREEN and have a border of 0", borderType="0", sep=".", color='green');
+print(print.__doc__, caption='');
 
 
 
