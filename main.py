@@ -5,7 +5,7 @@ def border(borderType="*", text='INSERT TXT HERE'):
    borderedText = f"\n\n\n{TopAndBottomborder}\n{borderType} {text}  {borderType}\n{TopAndBottomborder}\n\n\n";
    return borderedText;
 
-def print(*objects, end='\n', sep=' ', color=False, borderType=None, caption="Output from the NEW & IMPROVED Print => "):
+def print(*objects, end='\n', sep=' ', color=False, borderType=None, start="Output from the NEW & IMPROVED Print => "):
    """
    The New and improved print() function which comes with new and improved features!!!
    There MAY be more to come later...
@@ -18,7 +18,7 @@ def print(*objects, end='\n', sep=' ', color=False, borderType=None, caption="Ou
 
    init();
 
-   string= border(borderType=borderType, text=f'{caption}{sep.join(objects[0].split())}') if borderType else f'{caption}{sep.join(objects[0].split())}';
+   string= border(borderType=borderType, text=f'{start}{sep.join(objects[0].split())}') if borderType else f'{start}{sep.join(objects[0].split())}';
 
    if not color:
       stdout.write(string + end);
@@ -26,11 +26,10 @@ def print(*objects, end='\n', sep=' ', color=False, borderType=None, caption="Ou
       stdout.write(colored(string, color=color, attrs=["bold", "blink"]) + end);
 
 #TESTS.
-print("THIS SHOULD BE RED...", sep=' - ', end='\n\t===== NEW LINE HERE. =====\n', color='red', caption='changed the caption:');
+print("THIS SHOULD BE RED...", sep=' - ', end='\n\t===== NEW LINE HERE. =====\n', color='red', start='changed the start:');
 print("This should be GREEN and have a border of 0", borderType="0", sep=".", color='green');
-print("THIS IS HOW YOU DO A BORING OLD PRINT (SEE BELOW)", caption='');
-print(print.__doc__, caption='');
-
+print("THIS IS HOW YOU DO A BORING OLD PRINT (SEE BELOW)", start='');
+print(print.__doc__, start='');
 
 
 
