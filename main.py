@@ -3,12 +3,19 @@ from colorama import init;
 from termcolor import colored;
 
 init();
+#Auxillary function.
 def border(borderType="*", text='INSERT TXT HERE'):
+   """This border function adds a border feature to the new and improved print function (below)."""
    TopAndBottomborder=borderType*len(text) + (borderType*5)
    borderedText = f"\n\n\n{TopAndBottomborder}\n{borderType} {text}  {borderType}\n{TopAndBottomborder}\n\n\n";
    return borderedText;
 
 def print(*objects, end='\n', sep=' ', color=False, borderType=None):
+   """
+   The New and improved print() function which comes with new and improved features!!!
+   There MAY be more to come later...
+   If I can get around to it.
+   """
    string= border(borderType=borderType, text=f'THE OUTPUT IS: {sep.join(objects[0].split())}') if borderType else f'Output from the NEW & IMPROVED Print => {sep.join(objects[0].split())}';
 
    if not color:
