@@ -3,7 +3,7 @@ from colorama import init;
 from termcolor import colored;
 
 init();
-#Auxillary function.
+#Auxillary function that adds border feature.
 def border(borderType="*", text='INSERT TXT HERE'):
    """This border function adds a border feature to the new and improved print function (below)."""
    TopAndBottomborder=borderType*len(text) + (borderType*5)
